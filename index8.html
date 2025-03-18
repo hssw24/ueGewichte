@@ -73,10 +73,9 @@
             let overlayContent = document.createElement("div");
             overlayContent.style.background = "white";
             overlayContent.style.padding = "20px";
-            overlayContent.style.width = "50ch";
+            overlayContent.style.width = "50%";
             overlayContent.style.borderRadius = "8px";
             overlayContent.style.position = "relative";
-            overlayContent.style.overflowX = "auto";
             
             let closeButton = document.createElement("span");
             closeButton.innerHTML = "&times;";
@@ -93,31 +92,14 @@
             heading.innerText = "Information";
             
             let paragraph = document.createElement("div");
-            paragraph.innerHTML = "<p>g = Gramm ~ kg = Kilogramm ~ t = Tonne</p><p></p>";
-            
-            let table = document.createElement("table");
-            table.style.width = "100%";
-            table.style.borderCollapse = "collapse";
-            table.innerHTML = `
-                <tr>
-                    <td style="border: 1px solid black; padding: 5px;">1000 g = 1 kg</td>
-                    <td style="border: 1px solid black; padding: 5px;">1 t = 1000 kg</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid black; padding: 5px;">1000 kg = 1 t</td>
-                    <td style="border: 1px solid black; padding: 5px;">1 kg = 1000 g</td>
-                </tr>
-            `;
-            
+            paragraph.innerHTML = "1000 g = 1 kg<br>1000 kg = 1 t<br><br>1 t  = 1000 kg<br>1 kg = 1000 g";
             overlayContent.appendChild(closeButton);
             overlayContent.appendChild(heading);
             overlayContent.appendChild(paragraph);
-            overlayContent.appendChild(table);
             overlay.appendChild(overlayContent);
             document.body.appendChild(overlay);
         }
-    </script>
-       
+    </script>        
 
 	<h3>Gewichte umrechnen x</h3>
         <div class="question" id="question"></div>

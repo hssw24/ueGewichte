@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gewichte umrechnen</title>
+    <title>Gewichte umrechnen für Hexen</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,72 +54,7 @@
 </head>
 <body>
     <div class="container">
-    <button onclick="openOverlay()">Info</button>
-    
-    <script>
-        function openOverlay() {
-            let overlay = document.createElement("div");
-            overlay.id = "infoOverlay";
-            overlay.style.position = "fixed";
-            overlay.style.top = "0";
-            overlay.style.left = "0";
-            overlay.style.width = "100%";
-            overlay.style.height = "100%";
-            overlay.style.background = "rgba(0, 0, 0, 0.7)";
-            overlay.style.display = "flex";
-            overlay.style.justifyContent = "center";
-            overlay.style.alignItems = "center";
-            
-            let overlayContent = document.createElement("div");
-            overlayContent.style.background = "white";
-            overlayContent.style.padding = "20px";
-            overlayContent.style.width = "50ch";
-            overlayContent.style.borderRadius = "8px";
-            overlayContent.style.position = "relative";
-            overlayContent.style.overflowX = "auto";
-            
-            let closeButton = document.createElement("span");
-            closeButton.innerHTML = "&times;";
-            closeButton.style.position = "absolute";
-            closeButton.style.top = "10px";
-            closeButton.style.right = "15px";
-            closeButton.style.fontSize = "20px";
-            closeButton.style.cursor = "pointer";
-            closeButton.onclick = function() {
-                document.body.removeChild(overlay);
-            };
-            
-            let heading = document.createElement("h2");
-            heading.innerText = "Information";
-            
-            let paragraph = document.createElement("div");
-            paragraph.innerHTML = "<p>g = Gramm ~ kg = Kilogramm ~ t = Tonne</p><p></p>";
-            
-            let table = document.createElement("table");
-            table.style.width = "100%";
-            table.style.borderCollapse = "collapse";
-            table.innerHTML = `
-                <tr>
-                    <td style="border: 1px solid black; padding: 5px;">1000 g = 1 kg</td>
-                    <td style="border: 1px solid black; padding: 5px;">1 t = 1000 kg</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid black; padding: 5px;">1000 kg = 1 t</td>
-                    <td style="border: 1px solid black; padding: 5px;">1 kg = 1000 g</td>
-                </tr>
-            `;
-            
-            overlayContent.appendChild(closeButton);
-            overlayContent.appendChild(heading);
-            overlayContent.appendChild(paragraph);
-            overlayContent.appendChild(table);
-            overlay.appendChild(overlayContent);
-            document.body.appendChild(overlay);
-        }
-    </script>
-       
-
-	<h3>Gewichte umrechnen x</h3>
+        <h2>Gewichte umrechnen für Hexen </h2>
         <div class="question" id="question"></div>
         <div id="answers"></div>
         <div class="stats">
@@ -142,7 +77,7 @@
             { question: "4 t = ? kg", correct: "4000", options: ["4", "40", "4000", "400"] },
             { question: "7000 kg = ? t", correct: "7", options: ["7000", "70", "7", "700"] },
             { question: "6000 g = ? kg", correct: "6", options: ["600", "6", "6000", "60"] },
-            { question: "3 kg = ? g", correct: "3000", options: ["30", "3000", "300", "3"] },
+            { question: "3000 kg = ? g", correct: "3", options: ["30", "3000", "300", "3"] },
             { question: "8 t = ? kg", correct: "8000", options: ["8", "80", "8000", "800"] },
             { question: "4000 kg = ? t", correct: "4", options: ["4000", "40", "4", "400"] },
             { question: "1000 g = ? kg", correct: "1", options: ["100", "1", "1000", "10"] },
